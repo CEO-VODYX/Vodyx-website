@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+/* NAVBAR MAX-LEVEL */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* logo links, links gecentreerd, cart rechts */
+    background-color: #000;
+    padding: 10px 40px;
+}
+
+/* Logo in nav-balk */
+header .logo img {
+    height: 100px;   /* pas aan naar wens, b.v. 40px voor kleiner logo */
+    width: auto;    /* behoudt verhouding */
+    display: block;
+}
+
+
+/* Nav-links container */
+.navbar .nav-links {
+    display: flex;
+    flex: 1; /* neemt beschikbare ruimte */
+    justify-content: center; /* links gecentreerd tussen logo en cart */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Individuele nav-items */
+.navbar .nav-links li {
+    margin: 0 20px; /* ruimte tussen de links */
+}
+
+.navbar .nav-links li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.navbar .nav-links li a:hover {
+    color: #fffb00;
+}
+
+/* Winkelwagen */
+.navbar .cart a {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+}
+.hero
+{
+  -webkit-text-stroke: 0.7px black; /* border-lijn om de letters */
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 kolommen */
+    gap: 60px;
+    padding: 20px;
+    max-width: 800px;   /* optioneel, voor mooie breedte */
+    margin: 0 auto;     /* center op de pagina */
+}
+
+.product-card {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+}
+.aanbiedingen {
+    background-color: #000;
+    padding: 40px 20px;
+    color: white;
+}
+
+.aanbiedingen-header {
+    text-align: center;
+    margin-bottom: 30px;
+
+}
+
+.aanbiedingen-header h2 {
+    color: gold;
+    margin-bottom: 10px;
+}
+
+.ratings {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* ruimte tussen sterren */
+    font-size: 18px;
+    color: white;
+}
+
+.product-card .rating {
+    display: block;
+    margin: 5px 0;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+}
+
+.about-us-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 50px auto;
+    gap: 40px;
+}
+
+.about-left {
+    flex: 1;
+    min-width: 300px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.about-right {
+    flex: 1;
+    min-width: 300px;
+    border: 2px solid #000;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.about-right h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.team-member {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.team-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #000;
+}
+
+.member-info .name {
+    font-weight: bold;
+}
+
+.member-info .role {
+    font-size: 14px;
+    color: #555;
+}
+
+.member-info .email {
+    font-size: 13px;
+    color: #888;
+}
+
+body {
+    background-color: #00000069; /* zwarte achtergrond */
+    background-image: url('images/textuur.png'); /* je textuur afbeelding */
+    background-size: cover; /* vult hele pagina */
+    background-repeat: repeat; /* kan ook 'no-repeat' als je een groot patroon hebt */
+    background-position: center;
+    color: #000000; /* witte tekst zodat het leesbaar is op zwart */
+    font-family: 'Momo Trust Display', sans-serif;
+}
+
+/* Optioneel: link kleuren iets zachter wit/grijs maken */
+a, .member-info p {
+    color: #ffffff;
+}
+
+.about-us-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 50px auto;
+    gap: 40px;
+    background-color: rgba(0, 0, 0, 0.6); /* donkere overlay */
+    padding: 30px;
+    border-radius: 12px;
+}
