@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VODYX - Contact</title>
+   <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- HEADER / NAVIGATIE -->
+<header>
+    <nav class="navbar">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="images/vodyx.png" alt="VODYX Logo">
+        </div>
+
+        <!-- Navigatie items -->
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <!-- Winkelwagen -->
+        <div class="cart">
+            <a href="cart.html">🛒</a>
+        </div>
+    </nav>
+</header>
+
+<section style="padding:50px; text-align:center;">
+    <h2>Contacteer ons</h2>
+    <form action="https://formspree.io/f/movygwod" method="POST" style="display:flex; flex-direction:column; gap:10px; max-width:400px; margin:30px auto;">
+        <input type="text" name="naam" placeholder="Naam" required>
+        <input type="email" name="email" placeholder="E-mail" required>
+        <textarea name="bericht" placeholder="Bericht" rows="5" required></textarea>
+        <button type="submit" style="padding:10px; cursor:pointer;">Verstuur</button>
+    </form>
+</section>
+
+
+<footer>
+    <p>&copy; 2025 VODYX. Alle rechten voorbehouden.</p>
+</footer>
+</body>
+</html>
