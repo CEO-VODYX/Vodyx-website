@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VODYX - Winkelwagen</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- HEADER / NAVIGATIE -->
+<header>
+    <nav class="navbar">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="images/vodyx.png" alt="VODYX Logo">
+        </div>
+
+        <!-- Navigatie items -->
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <!-- Winkelwagen -->
+        <div class="cart">
+            <a href="cart.html">🛒</a>
+        </div>
+    </nav>
+</header>
+
+<!-- WINKELWAGEN CONTENT -->
+<section style="padding:50px; text-align:center;">
+    <h2>Winkelwagen</h2>
+    <div id="cart-items" style="margin-top:30px;"></div>
+    <p id="cart-total" style="margin-top:20px; font-weight:bold;"></p>
+    <button onclick="checkout()" style="padding:10px 20px; margin-top:20px; cursor:pointer;">Afrekenen</button>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>&copy; 2025 VODYX. Alle rechten voorbehouden.</p>
+</footer>
+
+<!-- SCRIPT -->
+<script src="scripts/script.js"></script>
+<script>
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+function displayCart() {
+    const cartDiv = document.getElementById('cart-items');
+    cartDiv.innerHTML = '';
+
+    if (cart.length === 0) {
+        cartDiv.innerHTML = "<p>Je winkelwagen is leeg.</p>";
+        document.getElementById('cart-total').innerText = "";
+        return;
+    }
+
+    let total = 0;
+
+    cart.forEach((item, index) => {
+        const itemRow = document.createElement("div");
+        itemRow.classList.add("cart-row");
+
+        itemRow.innerHTML = `
+            <p style="display:flex; justify-content:space-between; width:300px;">
+                <span>${item.name}</span>
+                <span>€${Number(item.price).toFixed(2)}</span>
+            </p>
+            <button onclick="removeItem(${index})" class="remove-btn">Verwijder</button>
+        `;
+
+        cartDiv.appendChild(itemRow);
+
+        total += Number(item.price);
+    });
+
+    document.getElementById('cart-total').innerText = `Totaal: €${total.toFixed(2)}`;
+}
+
+function removeItem(index) {
+    cart.splice(index, 1);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    displayCart();
+    updateCartCounter();
+}
+
+function updateCartCounter() {
+    const cartLink = document.querySelector('.cart a');
+    if (cartLink) {
+        cartLink.innerText = `🛒 (${cart.length})`;
+    }
+}
+
+function checkout() {
+    alert("Checkout komt later (Stripe integratie).");
+}
+
+displayCart();
+updateCartCounter();
+</script>
+
+
+</body>
+</html>

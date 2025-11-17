@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VODYX - Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- HEADER / NAVIGATIE -->
+<header>
+    <nav class="navbar">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="images/vodyx.png" alt="VODYX Logo">
+        </div>
+
+        <!-- Navigatie items -->
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <!-- Winkelwagen -->
+        <div class="cart">
+            <a href="cart.html">🛒</a>
+        </div>
+    </nav>
+</header>
+
+<!-- Hero banner shop -->
+<section class="hero" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('shop-hero.jpg') center/cover no-repeat;">
+    <div>
+        <h1>Shop de VODYX Collectie</h1>
+        <p>Ontdek onze nieuwste sportkleding en schoenen</p>
+        <a href="#products" class="btn">Bekijk Producten</a>
+    </div>
+</section>
+
+<!-- Zoekbalk -->
+<section class="search-bar">
+    <form id="search-form">
+        <input type="text" id="search-input" placeholder="Zoek producten...">
+        <button type="submit">Zoeken</button>
+    </form>
+</section>
+
+<!-- Aanbiedingen sectie -->
+<section class="section aanbiedingen">
+    <h2>⭐ Aanbiedingen van de week ⭐</h2>
+
+    <div class="products-grid">
+
+        <div class="product-card">
+            <img src="images/ChatGPT Image 17 nov 2025, 16_31_30.png" width="170px" alt="Sweatpants">
+            <h3 style="color: black;">VODYX Sweatpants</h3>
+            <p>39.99</p>
+            <span class="rating">4,5⭐</span>
+            <button class="add-to-cart">Toevoegen</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/Gemini_Generated_Image_quywk4quywk4quyw.png" width="250px" alt="Sportshirt">
+            <h3 style="color: black;">VODYX Sportshirt</h3>
+            <p>29.99</p>
+            <span class="rating">4,7⭐</span>
+            <button class="add-to-cart">Toevoegen</button>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Product grid -->
+<section class="featured-products" id="products">
+    <h2>Alle Producten</h2>
+    <div class="products-grid">
+        <div class="product-card"><img src="images/ChatGPT Image 17 nov 2025, 16_50_09.png" width="170px" alt="Hoodie"><h3>VODYX Hoodie</h3><p>59.99</p><button class="add-to-cart">Toevoegen</button></div>
+        <div class="product-card"><img src="images/ChatGPT Image 17 nov 2025, 16_31_30.png" width="170px" alt="Sweatpants"><h3>VODYX Sweatpants</h3><p>49.99</p><button class="add-to-cart">Toevoegen</button></div>
+        <div class="product-card"><img src="images/ChatGPT Image 17 nov 2025, 16_55_32.png" width="170px" alt="Sneakers"><h3>VODYX Sneakers</h3><p>89.99</p><button class="add-to-cart">Toevoegen</button></div>
+        <div class="product-card"><img src="images/Gemini_Generated_Image_quywk4quywk4quyw.png" width="250px" alt="Sportshirt"><h3>VODYX Sportshirt</h3><p>34.99</p><button class="add-to-cart">Toevoegen</button></div>
+        <div class="product-card"><img src="images/Gemini_Generated_Image_pb22bgpb22bgpb22.png"width="250px" alt="Joggingbroek"><h3>VODYX Joggingbroek</h3><p>44.99</p><button class="add-to-cart">Toevoegen</button></div>
+    </div>
+</section>
+
+<!-- Extra inspiratie sectie -->
+<section class="section" style="background-color:#1a1a1a;">
+    <h2>Sport met stijl</h2>
+    <p>Onze collectie is ontworpen voor comfort, prestaties en een moderne look. Perfect voor training en vrije tijd.</p>
+    <img src="sporters.jpg" alt="Sporters in actie" style="width:80%; border-radius:15px; margin-top:20px;">
+</section>
+
+<footer>
+    <p>&copy; 2025 VODYX. Alle rechten voorbehouden.</p>
+</footer>
+
+<script src="scripts/script.js"></script>
+</body>
+</html>
